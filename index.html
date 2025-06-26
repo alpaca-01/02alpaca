@@ -247,11 +247,7 @@ src="https://www.facebook.com/tr?id=1901727900611902&ev=PageView&noscript=1"
               wspBtn.innerText = 'Ir a WhatsApp del soporte';
               wspBtn.className = 'btn-wsp';
 
-              wspBtn.addEventListener('click', () => {
-  if (typeof fbq === 'function') {
-    fbq('track', 'Contact'); // También podés usar 'Lead' si preferís
-  }
-});
+              fbq('trackCustom', 'click_wsp_soporte');
               
               document.getElementById('messages').appendChild(wspBtn);
               scrollToBottom(); // scroll cuando agregamos el botón
